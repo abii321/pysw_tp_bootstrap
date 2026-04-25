@@ -1,11 +1,203 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="../css/home.css" rel="stylesheet">
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
-    
+
+    <header>
+        <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Turismo</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" href="#">Destinos</a>
+                        <a class="nav-link" href="#">Agencias</a>
+                        <a class="nav-link" href="#">Contacto</a>
+                        <a class="nav-link" href="#">Precios</a>
+                        <a class="nav-link" href="#">Blog</a>
+                        <a class="nav-link" href="#">Educativo</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="position-relative overflow-hidden" style="height: 600px;">
+            <video muted autoplay loop class="position-absolute w-100 h-100" style="object-fit: cover;"
+                src="../img/destinos/video_hero.mp4"></video>
+            <div class="position-absolute top-50 start-50  translate-middle  text-center text-white">
+                <h1 class="fw-bold">WORLD TRAVEL</h1>
+                <p class="lead">El mundo es demasiado grande como para quedarte en un solo lugar.</p>
+            </div>
+        </section>
+
+        <section class="m-3 m-md-5 text-center">
+            <h2>Destinos destacados</h2>
+            <div class="row">
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 p-sm-3 p-1 ">
+                    <div class="card align-items-stretch h-100">
+                        <img src="../img/destinos/argentina.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5>Argentina</h5>
+                            <p>Desde la fuerza de las Cataratas hasta el silencio de los glaciares. Descubrí por qué el
+                                fin del mundo es el comienzo de todo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 p-sm-3 p-1">
+                    <div class="card align-items-stretch h-100">
+                        <img src="../img/destinos/italia.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5>Italia</h3>
+                            <p>Un museo al aire libre. Caminá por la historia milenaria de Roma y disfrutá de la
+                                gastronomía
+                                más famosa del planeta.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 p-sm-3 p-1">
+                    <div class="card align-items-stretch h-100">
+                        <img src="../img/destinos/japon.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Japon</h3>
+                            <p class="card-text">El contraste perfecto entre templos antiguos y luces de neón. Viví una
+                                experiencia única
+                                donde la tecnología se une a la paz espiritual.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 p-sm-3 p-1">
+                    <div class="card align-items-stretch h-100">
+                        <img src="../img/destinos/grecia.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Grecia</h3>
+                            <p class="card-text">Navegá por las islas del Egeo y descubrí los secretos de la antigua
+                                civilización entre casas
+                                blancas y cúpulas azules.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 p-sm-3 p-1">
+                    <div class="card align-items-stretch h-100">
+                        <img src="../img/destinos/suiza.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Suiza</h3>
+                            <p class="card-text">El techo de Europa. Lagos de cristal y picos nevados que parecen
+                                sacados de
+                                una postal. Ideal
+                                para los amantes del aire puro.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 p-sm-3 p-1">
+                    <div class="card align-items-stretch h-100">
+                        <img src="../img/destinos/egipto.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Egipto</h3>
+                            <p class="card-text">Desde las pirámides mayas hasta las playas del Caribe. Un país lleno de
+                                vida, sabores intensos y una fe que se respira en cada rincón.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 p-sm-3 p-1">
+                    <div class="card align-items-stretch h-100">
+                        <img src="../img/destinos/mexico.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">México</h3>
+                            <p class="card-text">Desde las pirámides mayas hasta las playas del Caribe. Un país lleno de
+                                vida, sabores intensos y tradiciones que envuelven cada rincón.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 p-sm-3 p-1">
+                    <div class="card align-items-stretch h-100">
+                        <img src="../img/destinos/francia.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Francia</h3>
+                            <p class="card-text">El epicentro del arte y la elegancia. Déjate cautivar por las luces de
+                                París, los viñedos de Burdeos y el encanto de la Costa Azul.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--<section>
+            <h2>Opiniones</h2>
+            <div>
+                <span class="contador"></span>
+            </div>
+
+            <div class="carrusel">
+                <div class="carrusel-item">
+                    <p>"Increíble experiencia. Reservar fue súper sencillo y el destino superó todas mis expectativas."</p>
+                    <cite>— Lucas García</cite>
+                </div>
+                <div class="carrusel-item">
+                    <p>"Buscaba desconectarme del estrés de la facultad y encontré el lugar perfecto. La atención fue impecable."</p>
+                    <cite>— Martina Paz</cite>
+                </div>
+                <div class="carrusel-item">
+                    <p>"Me encantó la selección de destinos. Pude conocer lugares históricos auténticos."</p>
+                    <cite>— Elena Torres</cite>
+                </div>
+            </div>
+        </section>-->
+    </main>
+
+    <!--<footer>
+        <div class="columna-izq">
+        <h3>Redes Sociales</h3>
+        <div class="redes">
+            <a class="icon" href="https://www.instagram.com/?hl=es"><img src="../img/redes/logo-nstagram.png"></a>
+            <a class="icon" href="https://www.facebook.com/?locale=es_LA"><img src="../img/redes/logo-facebook.png"></a>
+            <a class="icon" href="https://x.com/?lang=es"><img src="../img/redes/logo-x.png"></a>
+            <a class="icon" href="https://www.youtube.com/?app=desktop&hl=es"><img src="../img/redes/logo-youtube.png"></a>
+            <a class="icon" href="https://www.tiktok.com/es-419/"><img src="../img/redes/logo-tiktok.png"></a>
+            <a class="icon" href="https://web.telegram.org/"><img src="../img/redes/logo-telegrama.png"></a>
+        </div>
+
+        <section class="contacto">
+            <h3>Nuestra Ubicación</h3>
+            <div class="mapa-contenedor">
+                <iframe src="https://www.google.com/maps/embed?..." allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </section>
+        </div>
+
+
+        <div class="columna-der">
+        <h3>Suscribite al newsletter y no te pierdas nada!</h3>
+        <form class="form-subscripcion">
+            <label for="nombre">Ingrese su nombre:</label>
+            <input type="text" id="nombre" placeholder="Tu Nombre" required>
+            <label for="apellido">Ingrese su apellido:</label>
+            <input type="text" id="apellido" placeholder="Tu Apellido" required>
+            <label for="correo">Ingrese su correo electronico</label>
+            <input type="email" id="correo" placeholder="Tu correo" required>
+            <button>Suscribirse</button>
+        </form>
+        </div>
+
+        <p>©World Travel 2026</p>
+    </footer>
+-->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
