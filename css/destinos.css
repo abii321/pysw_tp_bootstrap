@@ -1,0 +1,11 @@
+/* Transición suave para el efecto zoom controlado por JS/CSS */
+.card-zoom {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Ajuste sutil para que las imágenes de las cards mantengan una proporción uniforme */
+.card-zoom .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
