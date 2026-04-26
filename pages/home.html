@@ -4,24 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Turismo</title>
     <link href="../css/home.css" rel="stylesheet">
     <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
-<body>
+<body data-bs-theme="light">
 
+    <!--Barra de navegacion-->
     <header>
         <nav class="navbar navbar-expand-sm">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Turismo</a>
+                <a class="navbar-brand" href="#"><img src="../img/icons/principal.png" style="height: 30px;"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
+                    <div class="navbar-nav dis ">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                         <a class="nav-link" href="#">Destinos</a>
                         <a class="nav-link" href="#">Agencias</a>
@@ -29,6 +31,13 @@
                         <a class="nav-link" href="#">Precios</a>
                         <a class="nav-link" href="#">Blog</a>
                         <a class="nav-link" href="#">Educativo</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Modo</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" id="cambioClaro">Claro</a></li>
+                                <li><a class="dropdown-item" id="cambioOscuro">Oscuro</a></li>
+                            </ul>
+                        </li>
                     </div>
                 </div>
             </div>
@@ -36,15 +45,18 @@
     </header>
 
     <main>
+        <!--Hero-->
         <section class="position-relative overflow-hidden" style="height: 600px;">
-            <video muted autoplay loop class="position-absolute w-100 h-100" style="object-fit: cover;"
+            <video muted autoplay loop class="position-absolute w-100 h-100 text-hero" style="object-fit: cover;"
                 src="../img/destinos/video_hero.mp4"></video>
             <div class="position-absolute top-50 start-50  translate-middle  text-center text-white">
-                <h1 class="fw-bold">WORLD TRAVEL</h1>
-                <p class="lead">El mundo es demasiado grande como para quedarte en un solo lugar.</p>
+                <h1 class="fw-bold" id="titulo" style="display: none;">WORLD TRAVEL</h1>
+                <p class="lead" id="texto" style="display: none;">El mundo es demasiado grande como para quedarte en un
+                    solo lugar.</p>
             </div>
         </section>
 
+        <!--Destinos-->
         <section class="m-3 m-md-5 text-center">
             <h2>Destinos destacados</h2>
             <div class="row">
@@ -63,9 +75,9 @@
                         <img src="../img/destinos/italia.jpg" class="card-img-top">
                         <div class="card-body">
                             <h5>Italia</h3>
-                            <p>Un museo al aire libre. Caminá por la historia milenaria de Roma y disfrutá de la
-                                gastronomía
-                                más famosa del planeta.</p>
+                                <p>Un museo al aire libre. Caminá por la historia milenaria de Roma y disfrutá de la
+                                    gastronomía
+                                    más famosa del planeta.</p>
                         </div>
                     </div>
                 </div>
@@ -74,9 +86,10 @@
                         <img src="../img/destinos/japon.jpg" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Japon</h3>
-                            <p class="card-text">El contraste perfecto entre templos antiguos y luces de neón. Viví una
-                                experiencia única
-                                donde la tecnología se une a la paz espiritual.</p>
+                                <p class="card-text">El contraste perfecto entre templos antiguos y luces de neón. Viví
+                                    una
+                                    experiencia única
+                                    donde la tecnología se une a la paz espiritual.</p>
                         </div>
                     </div>
                 </div>
@@ -85,9 +98,9 @@
                         <img src="../img/destinos/grecia.jpg" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Grecia</h3>
-                            <p class="card-text">Navegá por las islas del Egeo y descubrí los secretos de la antigua
-                                civilización entre casas
-                                blancas y cúpulas azules.</p>
+                                <p class="card-text">Navegá por las islas del Egeo y descubrí los secretos de la antigua
+                                    civilización entre casas
+                                    blancas y cúpulas azules.</p>
                         </div>
                     </div>
                 </div>
@@ -96,10 +109,10 @@
                         <img src="../img/destinos/suiza.jpg" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Suiza</h3>
-                            <p class="card-text">El techo de Europa. Lagos de cristal y picos nevados que parecen
-                                sacados de
-                                una postal. Ideal
-                                para los amantes del aire puro.</p>
+                                <p class="card-text">El techo de Europa. Lagos de cristal y picos nevados que parecen
+                                    sacados de
+                                    una postal. Ideal
+                                    para los amantes del aire puro.</p>
                         </div>
                     </div>
                 </div>
@@ -108,8 +121,9 @@
                         <img src="../img/destinos/egipto.jpg" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Egipto</h3>
-                            <p class="card-text">Desde las pirámides mayas hasta las playas del Caribe. Un país lleno de
-                                vida, sabores intensos y una fe que se respira en cada rincón.</p>
+                                <p class="card-text">Desde las pirámides mayas hasta las playas del Caribe. Un país
+                                    lleno de
+                                    vida, sabores intensos y una fe que se respira en cada rincón.</p>
                         </div>
                     </div>
                 </div>
@@ -118,8 +132,9 @@
                         <img src="../img/destinos/mexico.jpg" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">México</h3>
-                            <p class="card-text">Desde las pirámides mayas hasta las playas del Caribe. Un país lleno de
-                                vida, sabores intensos y tradiciones que envuelven cada rincón.</p>
+                                <p class="card-text">Desde las pirámides mayas hasta las playas del Caribe. Un país
+                                    lleno de
+                                    vida, sabores intensos y tradiciones que envuelven cada rincón.</p>
                         </div>
                     </div>
                 </div>
@@ -128,76 +143,121 @@
                         <img src="../img/destinos/francia.jpg" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Francia</h3>
-                            <p class="card-text">El epicentro del arte y la elegancia. Déjate cautivar por las luces de
-                                París, los viñedos de Burdeos y el encanto de la Costa Azul.</p>
+                                <p class="card-text">El epicentro del arte y la elegancia. Déjate cautivar por las luces
+                                    de
+                                    París, los viñedos de Burdeos y el encanto de la Costa Azul.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!--<section>
+        <!--Opiniones-->
+        <section class="text-center">
             <h2>Opiniones</h2>
-            <div>
-                <span class="contador"></span>
+
+            <div class="card text-bg-light m-3 mx-auto" style="max-width: 22rem;">
+                <div class="card-body">
+                    <h3 class="contador" data-target="1000">+0</h3>
+                </div>
             </div>
 
-            <div class="carrusel">
-                <div class="carrusel-item">
-                    <p>"Increíble experiencia. Reservar fue súper sencillo y el destino superó todas mis expectativas."</p>
-                    <cite>— Lucas García</cite>
+            <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-inner px-5">
+                    <div class="carousel-item active" style="max-height: 700px; min-height: 100px;">
+                        <img src="../img/opiniones/opinion1.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption">
+                            <p class="fs-5">"Increíble experiencia. Reservar fue súper sencillo y el destino superó
+                                todas mis expectativas."</p>
+                            <cite class="fs-6">— Lucas García</cite>
+                        </div>
+                    </div>
+                    <div class="carousel-item" style="max-height: 700px; min-height: 100px;">
+                        <img src="../img/opiniones/opinion2.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption">
+                            <p class="fs-5">"Buscaba desconectarme del estrés de la facultad y encontré el lugar
+                                perfecto. La atención fue impecable."</p>
+                            <cite class="fs-6">— Martina Paz</cite>
+                        </div>
+                    </div>
+                    <div class="carousel-item" style="max-height: 700px; min-height: 100px;">
+                        <img src="../img/opiniones/opinion3.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption">
+                            <p class="fs-5">"Me encantó la selección de destinos. Pude conocer lugares históricos
+                                auténticos."</p>
+                            <cite class="fs-6">— Tomas Torres</cite>
+                        </div>
+                    </div>
                 </div>
-                <div class="carrusel-item">
-                    <p>"Buscaba desconectarme del estrés de la facultad y encontré el lugar perfecto. La atención fue impecable."</p>
-                    <cite>— Martina Paz</cite>
-                </div>
-                <div class="carrusel-item">
-                    <p>"Me encantó la selección de destinos. Pude conocer lugares históricos auténticos."</p>
-                    <cite>— Elena Torres</cite>
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-        </section>-->
+
+        </section>
     </main>
 
-    <!--<footer>
-        <div class="columna-izq">
-        <h3>Redes Sociales</h3>
-        <div class="redes">
-            <a class="icon" href="https://www.instagram.com/?hl=es"><img src="../img/redes/logo-nstagram.png"></a>
-            <a class="icon" href="https://www.facebook.com/?locale=es_LA"><img src="../img/redes/logo-facebook.png"></a>
-            <a class="icon" href="https://x.com/?lang=es"><img src="../img/redes/logo-x.png"></a>
-            <a class="icon" href="https://www.youtube.com/?app=desktop&hl=es"><img src="../img/redes/logo-youtube.png"></a>
-            <a class="icon" href="https://www.tiktok.com/es-419/"><img src="../img/redes/logo-tiktok.png"></a>
-            <a class="icon" href="https://web.telegram.org/"><img src="../img/redes/logo-telegrama.png"></a>
-        </div>
+    <!--Footer-->
+    <footer class="container-fluid">
+        <div class="row text-center mt-5">
+            <div class="col-md-6 mt-4">
+                <h3>Redes Sociales</h3>
+                <section class ="mb-3 d-flex justify-content-center">
+                    <i class="bi bi-instagram m-3"></i>
+                    <i class="bi bi-facebook m-3"></i>
+                    <i class="bi bi-twitter-x m-3"></i>
+                    <i class="bi bi-youtube m-3"></i>
+                    <i class="bi bi-tiktok m-3"></i>
+                    <i class="bi bi-telegram m-3"></i>
+                </section>
 
-        <section class="contacto">
-            <h3>Nuestra Ubicación</h3>
-            <div class="mapa-contenedor">
-                <iframe src="https://www.google.com/maps/embed?..." allowfullscreen="" loading="lazy">
-                </iframe>
+                <section class="mt-5">
+                    <h3>Nuestra Ubicación</h3>
+                    <div class="d-flex justify-content-center">
+                        <iframe src="https://www.google.com/maps/embed?..." allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </section>
             </div>
-        </section>
+
+            <div class="col-md-6 d-flex flex-column align-items-center mt-5">
+                <section>
+                    <h4>Suscribete al newsletter y no te pierdas nada!</h4>
+                    <form class="formulario m-3">
+                        <div class="row mb-3">
+                            <div class="col-md-4"><label for="nombre" class="form-label">Nombre:</label></div>
+                            <div class="col-md-8"><input type="text" class="form-control" id="nombre"></div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-4"><label for="apellido" class="form-label">Apellido:</label></div>
+                            <div class="col-md-8"><input type="text" class="form-control" id="apellido"></div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-4"><label for="correo" class="form-label">Correo electronico:</label></div>
+                            <div class="col-md-8"><input type="email" class="form-control" id="correo"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                    <p id="mensaje"></p>
+                </section>   
+            </div>
+
+            <p>©World Travel 2026</p>
         </div>
-
-
-        <div class="columna-der">
-        <h3>Suscribite al newsletter y no te pierdas nada!</h3>
-        <form class="form-subscripcion">
-            <label for="nombre">Ingrese su nombre:</label>
-            <input type="text" id="nombre" placeholder="Tu Nombre" required>
-            <label for="apellido">Ingrese su apellido:</label>
-            <input type="text" id="apellido" placeholder="Tu Apellido" required>
-            <label for="correo">Ingrese su correo electronico</label>
-            <input type="email" id="correo" placeholder="Tu correo" required>
-            <button>Suscribirse</button>
-        </form>
-        </div>
-
-        <p>©World Travel 2026</p>
     </footer>
--->
+
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../js/home.js"></script>
+    <script src="../js/global.js"></script>
 </body>
 
 </html>
