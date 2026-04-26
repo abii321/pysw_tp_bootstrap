@@ -1,0 +1,113 @@
+/* --- SPRITE CSS PARA LOGOS --- */
+.sprite {
+    background-image: url('../img/logos-agencias/logos.png'); /* imagen con los 6 logos */
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-size: 300px 200px;
+}
+
+    .logo-1, .logo-2, .logo-3, .logo-4, .logo-5, .logo-6 {
+    width: 100px;  /* Tamaño del logo en la card */
+    height: 100px;
+}
+
+
+/* Primera fila del collage */
+.logo-1 { background-position: 0px 0px; }       /* Arriba a la izquierda */
+.logo-2 { background-position: -100px 0px; }    /*  1 lugar a la izquierda */
+.logo-3 { background-position: -200px 0px; }    /*  2 lugares a la izquierda */
+
+/* Segunda fila del collage ( 3 arriba y 3 abajo) */
+.logo-4 { background-position: 0px -100px; }    /* Volvemos a la izquierda, pero bajamos 1 fila */
+.logo-5 { background-position: -100px -100px; } /* Medio de la fila de abajo */
+.logo-6 { background-position: -200px -100px; } /* Derecha de la fila de abajo */
+
+.icon-btn-check { 
+    width: 20px; 
+    height: 20px; 
+    background-position: -300px 0px; /* La coordenada que corresponde al tilde */
+    vertical-align: middle; 
+    margin-bottom: 3px;
+}
+
+/* --- CARDS CUADRADAS CON FLIP --- */
+.card-custom {
+    width: 280px;  /* Ancho y Alto iguales para que sea cuadrada */
+    height: 280px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card-inner.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+/* --- RATING --- */
+.rating {
+    font-size: 20px;
+    color: #ccc;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.card-custom:hover .rating {
+    color: gold;
+    transform: scale(1.2);
+}
+/* MODO OSCURO (Sobreescribe los colores fijos)*/
+
+/* --- FORZAR MODO OSCURO --- */
+
+/* 1. Fondo de la página */
+[data-bs-theme="dark"] main {
+    background-color: #121212 !important; /* Gris casi negro */
+}
+
+/* 2. El Navegador (Header) */
+[data-bs-theme="dark"] header {
+    background-color: #1a1a1a !important;
+    border-bottom: 1px solid #333;
+}
+
+/* 3. La cara FRONTAL de la tarjeta (que era blanca) */
+[data-bs-theme="dark"] .card-front {
+    background-color: #2c3e50 !important; /* Azul oscuro */
+    color: white !important;
+    border: 1px solid #444 !important;
+}
+
+/* 4. Títulos y textos */
+[data-bs-theme="dark"] h2, 
+[data-bs-theme="dark"] h3, 
+[data-bs-theme="dark"] .text-muted {
+    color: #ffffff !important;
+}
+
+/* 5. La cara TRASERA (la invertimos para que resalte) */
+[data-bs-theme="dark"] .card-back {
+    background-color: #e9ecef !important;
+    color: #2c3e50 !important;
+}
+
