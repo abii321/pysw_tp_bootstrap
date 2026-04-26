@@ -1,5 +1,5 @@
 .card:hover{
     background-color: #ede9de;
+    color: black;
     transform: translateY(-10px);
 }
-
