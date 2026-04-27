@@ -1,0 +1,79 @@
+/* --- ESTILOS GENERALES DE LA TABLA --- */
+.tabla-header th {
+    background-color: #2c3e50 !important;
+    color: white !important;
+}
+
+/* Animación del precio al hacer hover sobre la fila */
+.precio {
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+/* --- BANNER DEL TÍTULO --- */
+.banner-titulo {
+    background-color: #2c3e50; 
+    padding: 3rem 1.5rem;
+    border-radius: 20px;
+    margin-top: 2rem; 
+}
+
+/* Ajuste para el Modo Oscuro */
+[data-bs-theme="dark"] .banner-titulo {
+    background-color: #1e293b !important; 
+    border: 1px solid #334155;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #e6f0ff !important; 
+    cursor: default;
+}
+
+.table-hover tbody tr:hover .precio {
+    color: #1a73e8 !important; 
+    font-size: 19px;
+    transform: scale(1.1);
+}
+
+/* los botones de tooltip */
+.tooltip-custom {
+    cursor: help;
+    font-size: 14px;
+    padding: 8px 12px;
+}
+
+/* MODO OSCURO*/
+
+/* Fondo general */
+[data-bs-theme="dark"] main {
+    background-color: #121212 !important; 
+}
+
+/* Navegador */
+[data-bs-theme="dark"] header {
+    background-color: #1a1a1a !important;
+    border-bottom: 1px solid #333;
+}
+
+/* Títulos y textos */
+[data-bs-theme="dark"] h2, 
+[data-bs-theme="dark"] .text-secondary {
+    color: #ffffff !important;
+}
+
+/* La tabla en modo oscuro */
+[data-bs-theme="dark"] .table {
+    --bs-table-bg: #1e293b;
+    --bs-table-color: #e9ecef;
+    border-color: #334155;
+}
+
+/* Hover de la tabla en modo oscuro */
+[data-bs-theme="dark"] .table-hover tbody tr:hover {
+    background-color: #334155 !important;
+}
+
+/* El precio resalta en celeste cuando está oscuro */
+[data-bs-theme="dark"] .table-hover tbody tr:hover .precio {
+    color: #6ea8fe !important; 
+}
