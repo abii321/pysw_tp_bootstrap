@@ -1,55 +1,45 @@
 $(document).ready(function () {
 
-    // 1. Filtros Dinámicos de Destinos (.filter, .hide, .show)
-    $('.btn-filtro').click(function () {
-        // Remover clase active de todos y agregarla al cliqueado
-        $('.btn-filtro').removeClass('active');
-        $(this).addClass('active');
+    // --- MODO CLARO / OSCURO ---
+    // (Funciona en sintonía con el que tenías en contacto.js)
+    $("#cambioClaro").click(function () {
+        $("body").attr("data-bs-theme", "light");
+        $("main").css("--bg-color", "#f4f6f8");
+    });
 
-        let categoria = $(this).attr('data-filter');
+    $("#cambioOscuro").click(function () {
+        $("body").attr("data-bs-theme", "dark");
+        $("main").css("--bg-color", "#121212");
+    });
 
-        if (categoria === 'todos') {
-            // Mostrar todos con una pequeña animación
-            $('.destino-item').show(400);
+    // --- FILTROS DINÁMICOS CON JQUERY ---
+    $('#filtros-destinos .btn').click(function () {
+        // Estilos de los botones
+        $('#filtros-destinos .btn').removeClass('active btn-primary').addClass('btn-outline-primary');
+        $(this).removeClass('btn-outline-primary').addClass('active btn-primary');
+
+        let filtroSeleccionado = $(this).data('filter');
+
+        if (filtroSeleccionado === 'todos') {
+            $('.destino-card').show(400); // Muestra todos con animación
         } else {
-            // Ocultar todos
-            $('.destino-item').hide();
-            // Filtrar y mostrar solo los de la categoría seleccionada
-            $('.destino-item').filter('[data-categoria="' + categoria + '"]').show(400);
+            // Ocultar todos, luego filtrar y mostrar solo los seleccionados
+            $('.destino-card').hide(); 
+            $('.destino-card').filter('.' + filtroSeleccionado).show(400); 
         }
     });
 
-    // 2. Efecto Zoom en Cards combinando CSS y jQuery
-    $('.card-zoom').hover(
-        function () {
-            // Al entrar el mouse
-            $(this).css('transform', 'scale(1.05)');
-            $(this).addClass('shadow-lg');
-        },
-        function () {
-            // Al salir el mouse
-            $(this).css('transform', 'scale(1)');
-            $(this).removeClass('shadow-lg');
-        }
-    );
+    // --- SANITIZACIÓN ---
+    // Previene inyección de código básico reemplazando los corchetes angulares
+    function sanitizarDato(texto) {
+        return texto.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    }
 
-    // 3. Módulo Educativo Phishing - Feedback con jQuery
-    $('.btn-phishing-test').click(function () {
-        let esSeguro = $(this).attr('data-seguro');
-        let $feedback = $('#feedback-phishing');
-
-        // Limpiamos clases previas
-        $feedback.removeClass('alert-danger alert-success');
-
-        if (esSeguro === 'falso') {
-            $feedback.addClass('alert alert-danger')
-                     .html('<i class="bi bi-x-circle-fill"></i> <strong>¡Caíste en la trampa!</strong> Fíjate en el remitente: "vuelos-seguros-update.com" es un dominio falso diseñado para engañarte y robar tu contraseña. Nunca hagas clic en enlaces de correos alarmantes.')
-                     .hide().fadeIn(500);
-        } else {
-            $feedback.addClass('alert alert-success')
-                     .html('<i class="bi bi-check-circle-fill"></i> <strong>¡Excelente decisión!</strong> Siempre es mejor ignorar los enlaces en correos sospechosos y dirigirte manualmente a la aplicación oficial o sitio web que ya conoces.')
-                     .hide().fadeIn(500);
-        }
+    // Resetear el modal cuando el usuario lo cierra, para que vuelva a estar como al principio
+    $('#modalPhishing').on('hidden.bs.modal', function () {
+        $('#formSimulacionPhishing')[0].reset();
+        $('#phishingFeedback').hide();
+        $('#phishingFormContainer').show();
     });
 
 });

@@ -1,11 +1,53 @@
-/* Transición suave para el efecto zoom controlado por JS/CSS */
-.card-zoom {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    cursor: pointer;
+/* --- EFECTO ZOOM EN CARDS --- */
+.card-efecto-zoom .overflow-hidden {
+    border-top-left-radius: calc(0.375rem - 1px);
+    border-top-right-radius: calc(0.375rem - 1px);
 }
 
-/* Ajuste sutil para que las imágenes de las cards mantengan una proporción uniforme */
-.card-zoom .card-img-top {
-    height: 200px;
-    object-fit: cover;
+.card-efecto-zoom img {
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Efecto al hacer hover con CSS */
+.card-efecto-zoom:hover img {
+    transform: scale(1.15);
+}
+
+.card-efecto-zoom {
+    transition: box-shadow 0.3s ease;
+}
+
+.card-efecto-zoom:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* --- SOPORTE PARA MODO OSCURO --- */
+
+[data-bs-theme="dark"] header {
+    background-color: #1a1a1a !important;
+    border-bottom: 1px solid #333;
+}
+
+[data-bs-theme="dark"] .text-theme {
+    color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] .card {
+    background-color: #2c3e50 !important;
+    border-color: #444 !important;
+}
+
+[data-bs-theme="dark"] .card-title,
+[data-bs-theme="dark"] .card-text {
+    color: #e9ecef !important;
+}
+
+[data-bs-theme="dark"] .table-theme {
+    color: white !important;
+    border-color: #444 !important;
+}
+
+[data-bs-theme="dark"] .table-theme tbody tr td {
+    background-color: #2c3e50;
+    color: white;
 }
