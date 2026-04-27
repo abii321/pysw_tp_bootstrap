@@ -35,20 +35,6 @@ $(document).ready(function () {
         return texto.replace(/</g, "&lt;").replace(/>/g, "&gt;");
     }
 
-    // --- MÓDULO EDUCATIVO (SIMULACIÓN DE PHISHING) ---
-    $('#formSimulacionPhishing').submit(function (e) {
-        e.preventDefault(); // Evitamos que la página recargue o envíe datos reales
-
-        // Aplicamos sanitización por buena práctica de seguridad, aunque los datos no se guarden
-        let dniIngresado = sanitizarDato($('#fakeDNI').val());
-        let passIngresado = sanitizarDato($('#fakePass').val());
-
-        // Efectos jQuery: Ocultar el form falso y mostrar la advertencia
-        $('#phishingFormContainer').slideUp(300, function() {
-            $('#phishingFeedback').slideDown(400);
-        });
-    });
-
     // Resetear el modal cuando el usuario lo cierra, para que vuelva a estar como al principio
     $('#modalPhishing').on('hidden.bs.modal', function () {
         $('#formSimulacionPhishing')[0].reset();

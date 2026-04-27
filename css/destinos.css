@@ -21,13 +21,6 @@
     box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-/* --- ESTILOS BANCO FALSO (PHISHING) --- */
-.fake-bank-header {
-    background-color: #0b3c5d; /* Azul tipo banco clásico */
-    color: white;
-    border-bottom: 4px solid #f2a900; /* Detalle amarillo oro */
-}
-
 /* --- SOPORTE PARA MODO OSCURO --- */
 
 [data-bs-theme="dark"] header {
