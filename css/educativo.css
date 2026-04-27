@@ -1,0 +1,31 @@
+/* --- ESTILOS BANCO FALSO (PHISHING) --- */
+.fake-bank-container {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.fake-bank-header {
+    background-color: #0b3c5d; /* Azul tipo banco clásico */
+    color: white;
+    border-bottom: 4px solid #f2a900; /* Detalle amarillo oro */
+}
+
+/* --- SOPORTE PARA MODO OSCURO --- */
+[data-bs-theme="dark"] header {
+    background-color: #1a1a1a !important;
+    border-bottom: 1px solid #333;
+}
+
+[data-bs-theme="dark"] .text-theme {
+    color: #ffffff !important;
+}
+
+/* El fondo del formulario del banco se mantiene claro incluso en modo oscuro 
+   para dar la sensación de ser una web externa incrustada */
+[data-bs-theme="dark"] .fake-bank-container {
+    background-color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] .fake-bank-container label {
+    color: #212529 !important;
+}
