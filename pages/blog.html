@@ -13,27 +13,34 @@
 <body class="bg-light d-flex flex-column min-vh-100">
 
     <header class="bg-white shadow-sm sticky-top">
-        <nav class="navbar navbar-expand-sm container">
+        <nav class="navbar navbar-expand-sm">
             <div class="container-fluid">
                 <a class="navbar-brand text-primary"><i class="bi bi-globe-americas"></i></a>
-                <div class="navbar-nav me-auto">
-                    <a class="nav-link" href="../pages/home.html">Inicio</a>
-                    <a class="nav-link" href="../pages/destinos.html">Destinos</a>
-                    <a class="nav-link" href="../pages/agencias.html">Agencias</a>
-                    <a class="nav-link" href="../pages/contacto.html">Contacto</a>
-                    <a class="nav-link" href="../pages/precios.html">Precios</a>
-                    <a class="nav-link active fw-bold" href="../pages/blog.html">Blog</a>
-                    <a class="nav-link" href="../pages/educativo.html">Educativo</a>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Modo
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" id="cambioClaro" style="cursor:pointer;">Claro</a></li>
-                            <li><a class="dropdown-item" id="cambioOscuro" style="cursor:pointer;">Oscuro</a></li>
-                        </ul>
-                    </li>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link" href="../pages/home.html">Home</a>
+                        <a class="nav-link" href="../pages/destinos.html">Destinos</a>
+                        <a class="nav-link" href="../pages/agencias.html">Agencias</a>
+                        <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                        <a class="nav-link" href="../pages/precios.html">Precios</a>                       
+                        <a class="nav-link active fw-bold" aria-current="page" href="../pages/blog.html">Blog</a>  
+                        <a class="nav-link" href="../pages/educativo.html">Educativo</a>
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="cursor:pointer;">Modo</a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" id="cambioClaro" style="cursor:pointer;">Claro</a></li>
+                                <li><a class="dropdown-item" id="cambioOscuro" style="cursor:pointer;">Oscuro</a></li>
+                            </ul>
+                        </li>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -209,30 +216,16 @@
             </div>
 
             <aside class="col-12 col-lg-4">
-                <div class="sticky-top" style="top: 100px;">
-
-                    <div class="card border-0 shadow-sm rounded-4 mb-4 text-center autor-card">
+                <div class="sticky-top" style="top: 100px;"> 
+                    
+                    <div class="card border-0 shadow-sm rounded-4 text-center autor-card">
                         <div class="card-body p-4">
-                            <img src="../img/blog/john.png" class="rounded-circle mb-3 shadow" width="100"
-                                height="100" style="object-fit: cover;" alt="John Doe">
+                            <img src="../img/blog/john.png" class="rounded-circle mb-3 shadow" width="100" height="100" style="object-fit: cover;" alt="John Doe">
                             <h5 class="fw-bold">John Doe</h5>
-                            <p class="text-muted small mb-3">Fotógrafo de viajes y mochilero empedernido. Escribo para
-                                inspirarte a empacar y salir.</p>
+                            <p class="text-muted small mb-3">Fotógrafo de viajes y mochilero empedernido. Escribo para inspirarte a empacar y salir.</p>
                             <div class="d-flex justify-content-center gap-2">
-                                <a href="#" class="btn btn-sm btn-outline-dark rounded-circle"><i
-                                        class="bi bi-instagram"></i></a>
-                                <a href="#" class="btn btn-sm btn-outline-dark rounded-circle"><i
-                                        class="bi bi-twitter-x"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card border-0 shadow-sm rounded-4 mb-4">
-                        <div class="card-body">
-                            <h6 class="fw-bold mb-3">Buscar en el blog</h6>
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Ej: Playas, Europa...">
-                                <button class="btn btn-primary" type="button"><i class="bi bi-search"></i></button>
+                                <a href="#" class="btn btn-sm btn-outline-dark rounded-circle"><i class="bi bi-instagram"></i></a>
+                                <a href="#" class="btn btn-sm btn-outline-dark rounded-circle"><i class="bi bi-twitter-x"></i></a>
                             </div>
                         </div>
                     </div>

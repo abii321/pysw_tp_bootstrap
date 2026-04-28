@@ -12,28 +12,32 @@
 
 <body class="bg-light" data-bs-theme="light">
 
-    <header class="bg-white shadow-sm">
-        <nav class="navbar navbar-expand-sm container">
+    <header class="bg-white shadow-sm sticky-top">
+        <nav class="navbar navbar-expand-sm">
             <div class="container-fluid">
                 <a class="navbar-brand text-primary"><i class="bi bi-globe-americas"></i></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <div class="navbar-nav me-auto">
+                
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ms-auto">
                         <a class="nav-link" href="../pages/home.html">Home</a>
                         <a class="nav-link" href="../pages/destinos.html">Destinos</a>
-                        <a class="nav-link active fw-bold" href="../pages/agencias.html">Agencias</a>
+                        
+                        <a class="nav-link active fw-bold" aria-current="page" href="../pages/agencias.html">Agencias</a>
+                        
                         <a class="nav-link" href="../pages/contacto.html">Contacto</a>
                         <a class="nav-link" href="../pages/precios.html">Precios</a>
                         <a class="nav-link" href="../pages/blog.html">Blog</a>
                         <a class="nav-link" href="../pages/educativo.html">Educativo</a>
+                        
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Modo
-                            </a>
-                            <ul class="dropdown-menu">
+                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="cursor:pointer;">Modo</a>
+                            <ul class="dropdown-menu dropdown-menu-end">
                                 <li><a class="dropdown-item" id="cambioClaro" style="cursor:pointer;">Claro</a></li>
                                 <li><a class="dropdown-item" id="cambioOscuro" style="cursor:pointer;">Oscuro</a></li>
                             </ul>
