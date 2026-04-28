@@ -6,21 +6,38 @@
     background-size: 300px 200px;
 }
 
-    .logo-1, .logo-2, .logo-3, .logo-4, .logo-5, .logo-6 {
-    width: 100px;  /* Tamaño del logo en la card */
+    .logo-1, .logo-5 {
+        width: 110px;  /* Tamaño del logo en la card */
+        height: 70px;
+        transform: scale(1.7);
+    } 
+    .logo-2, .logo-6 {
+        width: 100px;  
+        height: 100px;
+        transform: scale(1);
+    }
+    .logo-3, .logo-4  {
+    width: 100px; 
     height: 100px;
+    transform: scale(1.4);
+}
+
+.logo-4 {
+    width: 100px; 
+    height: 80px;
+    transform: scale(1.6);
 }
 
 
 /* Primera fila del collage */
-.logo-1 { background-position: 0px 0px; }       /* Arriba a la izquierda */
-.logo-2 { background-position: -100px 0px; }    /*  1 lugar a la izquierda */
-.logo-3 { background-position: -200px 0px; }    /*  2 lugares a la izquierda */
+.logo-1 { background-position: -200px 0px; }       /* Arriba a la izquierda */
+.logo-2 { background-position: 0px 0px; }    /*  1 lugar a la izquierda */
+.logo-3 { background-position: -200px -70px; }    /*  2 lugares a la izquierda */
 
 /* Segunda fila del collage ( 3 arriba y 3 abajo) */
-.logo-4 { background-position: 0px -100px; }    /* Volvemos a la izquierda, pero bajamos 1 fila */
-.logo-5 { background-position: -100px -100px; } /* Medio de la fila de abajo */
-.logo-6 { background-position: -200px -100px; } /* Derecha de la fila de abajo */
+.logo-4 { background-position: 10px -120px; }    /* Volvemos a la izquierda, pero bajamos 1 fila */
+.logo-5 { background-position: -105px -0px; } /* Medio de la fila de abajo */
+.logo-6 { background-position: -85px -100px; } /* Derecha de la fila de abajo */
 
 .icon-btn-check { 
     width: 20px; 
