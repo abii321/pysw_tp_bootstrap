@@ -35,16 +35,20 @@ $(document).ready(function () {
 
         // Validación básica
         if (nombre === "" || apellido === "" || correo === "") {
-            $("#mensaje").text("⚠️ Completa todos los campos").css("color", "red");
+            $("#mensaje").text("Completa todos los campos").css("color", "red");
             return;
         }
 
         // Mensaje seguro
         $("#mensaje")
-            .text("✅ Gracias por suscribirte, " + nombre)
+            .text("Gracias por suscribirte, " + nombre)
             .css("color", "green")
             .hide()
             .fadeIn(800);
+        setTimeout(function () {
+            $("#mensaje").fadeOut(800);
+        }, 3000); // espera 3 segundos
+
 
         // Limpiar formulario
         $(".formulario")[0].reset();
