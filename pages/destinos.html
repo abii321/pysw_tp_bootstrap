@@ -13,16 +13,18 @@
 <body data-bs-theme="light">
 
     <header class="bg-white shadow-sm">
-        <nav class="navbar navbar-expand-sm container">
+        <nav class="navbar navbar-expand-sm">
             <div class="container-fluid">
-                <a class="navbar-brand text-primary"><i class="bi bi-globe-americas"></i></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <a class="navbar-brand"><i class="bi bi-globe-americas"></i></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <div class="navbar-nav ms-auto">
-                        <a class="nav-link" href="home.html">Home</a>
-                        <a class="nav-link active fw-bold" href="../pages/destinos.html">Destinos</a>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav dis ">
+                        <a class="nav-link active" aria-current="page" href="../pages/home.html">Home</a>
+                        <a class="nav-link" href="../pages/destinos.html">Destinos</a>
                         <a class="nav-link" href="../pages/agencias.html">Agencias</a>
                         <a class="nav-link" href="../pages/contacto.html">Contacto</a>
                         <a class="nav-link" href="../pages/precios.html">Precios</a>
@@ -31,8 +33,8 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Modo</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" id="cambioClaro" style="cursor:pointer;">Claro</a></li>
-                                <li><a class="dropdown-item" id="cambioOscuro" style="cursor:pointer;">Oscuro</a></li>
+                                <li><a class="dropdown-item" id="cambioClaro">Claro</a></li>
+                                <li><a class="dropdown-item" id="cambioOscuro">Oscuro</a></li>
                             </ul>
                         </li>
                     </div>
@@ -57,7 +59,7 @@
                 <div class="col-12 col-md-6 col-lg-4 col-xl-3 destino-card america">
                     <div class="card h-100 card-efecto-zoom">
                         <div class="overflow-hidden">
-                            <img src="../img/destinos/argentina.jpg" class="card-img-top" alt="Argentina">
+                            <img src="../img/destinos/argentina.jpg" class="card-img-top" loading="lazy" alt="Argentina">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Argentina</h5>
@@ -69,7 +71,7 @@
                 <div class="col-12 col-md-6 col-lg-4 col-xl-3 destino-card america">
                     <div class="card h-100 card-efecto-zoom">
                         <div class="overflow-hidden">
-                            <img src="../img/destinos/brazil.jpg" class="card-img-top" alt="Brasil">
+                            <img src="../img/destinos/brazil.jpg" class="card-img-top" loading="lazy" alt="Brasil">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Brasil</h5>
@@ -81,7 +83,7 @@
                 <div class="col-12 col-md-6 col-lg-4 col-xl-3 destino-card asia">
                     <div class="card h-100 card-efecto-zoom">
                         <div class="overflow-hidden">
-                            <img src="../img/destinos/egipto.jpg" class="card-img-top" alt="Egipto">
+                            <img src="../img/destinos/egipto.jpg" class="card-img-top" loading="lazy" alt="Egipto">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Egipto</h5>
@@ -93,7 +95,7 @@
                 <div class="col-12 col-md-6 col-lg-4 col-xl-3 destino-card europa">
                     <div class="card h-100 card-efecto-zoom">
                         <div class="overflow-hidden">
-                            <img src="../img/destinos/italia.jpg" class="card-img-top" alt="Italia">
+                            <img src="../img/destinos/italia.jpg" class="card-img-top" loading="lazy" alt="Italia">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Italia</h5>
@@ -105,7 +107,7 @@
                 <div class="col-12 col-md-6 col-lg-4 col-xl-3 destino-card europa">
                     <div class="card h-100 card-efecto-zoom">
                         <div class="overflow-hidden">
-                            <img src="../img/destinos/francia.jpg" class="card-img-top" alt="Francia">
+                            <img src="../img/destinos/francia.jpg" class="card-img-top" loading="lazy" alt="Francia">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Francia</h5>
@@ -117,7 +119,7 @@
                 <div class="col-12 col-md-6 col-lg-4 col-xl-3 destino-card europa">
                     <div class="card h-100 card-efecto-zoom">
                         <div class="overflow-hidden">
-                            <img src="../img/destinos/grecia.jpg" class="card-img-top" alt="Grecia">
+                            <img src="../img/destinos/grecia.jpg" class="card-img-top" loading="lazy" alt="Grecia">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Grecia</h5>
@@ -130,7 +132,7 @@
                 <div class="col-12 col-md-6 col-lg-4 col-xl-3 destino-card asia">
                     <div class="card h-100 card-efecto-zoom">
                         <div class="overflow-hidden">
-                            <img src="../img/destinos/japon.jpg" class="card-img-top" alt="Japón">
+                            <img src="../img/destinos/japon.jpg" class="card-img-top" loading="lazy" alt="Japón">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Japón</h5>
@@ -142,7 +144,7 @@
                 <div class="col-12 col-md-6 col-lg-4 col-xl-3 destino-card america">
                     <div class="card h-100 card-efecto-zoom">
                         <div class="overflow-hidden">
-                            <img src="../img/destinos/mexico.jpg" class="card-img-top" alt="México">
+                            <img src="../img/destinos/mexico.jpg" class="card-img-top" loading="lazy" alt="México">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">México</h5>
@@ -154,7 +156,7 @@
                 <div class="col-12 col-md-6 col-lg-4 col-xl-3 destino-card europa">
                     <div class="card h-100 card-efecto-zoom">
                         <div class="overflow-hidden">
-                            <img src="../img/destinos/suiza.jpg" class="card-img-top" alt="Suiza">
+                            <img src="../img/destinos/suiza.jpg" class="card-img-top" loading="lazy" alt="Suiza">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Suiza</h5>
