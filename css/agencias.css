@@ -79,20 +79,45 @@
     transform: rotateY(180deg);
 }
 
-/* --- RATING --- */
-.rating {
-    font-size: 20px;
-    color: #ccc;
-    transition: transform 0.3s, color 0.3s;
+/*ANIMACIÓN DE LAS ESTRELLAS (RATING)*/
+
+/* Creamos la animación de rebote  */
+@keyframes star-pop {
+    0% { transform: scale(0); opacity: 0; }
+    80% { transform: scale(1.3); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
 }
 
-.card-custom:hover .rating {
-    color: gold;
-    transform: scale(1.2);
+/* Se la aplicamos a los íconos de estrella */
+.bi-star-fill {
+    display: inline-block; /* Necesario para que el transform funcione */
+    opacity: 0; /* Arrancan invisibles */
 }
+
+/* Magia: Hacemos que aparezcan cuando la tarjeta gira (al hacer hover en el contenedor) */
+.card-inner:hover .bi-star-fill,
+.flipped .bi-star-fill {
+    animation: star-pop 0.4s ease forwards;
+}
+
+/* Efecto cascada: Retrasamos cada estrella para que aparezcan una por una */
+.bi-star-fill:nth-child(1) { animation-delay: 0.1s; }
+.bi-star-fill:nth-child(2) { animation-delay: 0.2s; }
+.bi-star-fill:nth-child(3) { animation-delay: 0.3s; }
+.bi-star-fill:nth-child(4) { animation-delay: 0.4s; }
+.bi-star-fill:nth-child(5) { animation-delay: 0.5s; }
+
+/*  Efecto interactivo al pasar el mouse directo sobre la estrella */
+.bi-star-fill:hover {
+    transform: scale(1.3) rotate(15deg) !important;
+    transition: transform 0.2s ease;
+    cursor: crosshair;
+    filter: drop-shadow(0 0 5px rgba(255, 193, 7, 0.8)); /* Brillo extra */
+}
+
 /* MODO OSCURO (Sobreescribe los colores fijos)*/
 
-/* --- FORZAR MODO OSCURO --- */
+/* FORZAR MODO OSCURO */
 
 /* 1. Fondo de la página */
 [data-bs-theme="dark"] main {
