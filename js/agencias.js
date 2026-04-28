@@ -14,11 +14,14 @@ $('#cambioClaro').click(function() {
     });
 
     // Rating dinámico
-    $('.rating-box').each(function() {
+   $('.rating-box').each(function() {
         let rating = $(this).data('rating');
         let stars = '<div class="rating">';
         for(let i = 1; i <= 5; i++) {
-            stars += (i <= rating) ? '<span>★</span>' : '<span style="opacity: 0.3">★</span>';
+            // Si la estrella entra en el rating, la pintamos de amarillo (text-warning). 
+            // Si no, la pintamos de gris clarito (text-secondary).
+            // Además le sumamos "fs-5" para que tengan un lindo tamaño.
+            stars += (i <= rating) ? '<span class="text-warning fs-5">★</span>' : '<span class="text-secondary fs-5" style="opacity: 0.3">★</span>';
         }
         stars += '</div>';
         $(this).html(stars);
