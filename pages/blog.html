@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="../css/blog.css">
 </head>
 
-<body class="bg-body-tertiary d-flex flex-column min-vh-100">
+<body class="bg-body-tertiary d-flex flex-column min-vh-100" data-bs-theme="light">
 
-    <header class="bg-white shadow-sm sticky-top">
+    <!-- CAMBIO: bg-white por bg-body -->
+    <header class="bg-body shadow-sm sticky-top">
         <nav class="navbar navbar-expand-sm">
             <div class="container-fluid">
                 <a class="navbar-brand"><i class="bi bi-globe-americas"></i></a>
@@ -48,7 +49,8 @@
 
     <main class="container py-5" style="flex-grow: 1;">
 
-        <div class="text-center mb-5 banner-salmon shadow-sm">
+        <!-- CAMBIO: Agregado py-5 px-4 rounded-4 para reemplazar el padding y border-radius del CSS -->
+        <div class="text-center mb-5 banner-salmon shadow-sm py-5 px-4 rounded-4">
             <h1 class="display-5 fw-bold text-white mb-3">Diario de Viajero</h1>
             <p class="mx-auto" style="max-width: 600px; color: #fff3ed; font-size: 1.1rem;">
                 Descubrí guías, tips y relatos de nuestras aventuras.
@@ -70,50 +72,50 @@
                             data-bs-target="#relax">Relax</button></li>
                 </ul>
 
-                <div class="tab-content bg-white p-4 rounded-4 shadow-sm border mb-5" id="blog-tabs-content">
+                <!-- CAMBIO: bg-white por bg-body -->
+                <div class="tab-content bg-body p-4 rounded-4 shadow-sm border mb-5" id="blog-tabs-content">
 
                     <div class="tab-pane fade show active" id="todos" tabindex="0">
                         <div class="row g-4">
                             <article class="col-12 col-md-6 animacion-scroll">
-                                <div class="card h-100 article-card shadow-sm border-0">
-                                    <img src="../img/destinos/grecia.jpg" class="card-img-top" alt="Grecia">
+                                <div class="card h-100 article-card shadow-sm border-0 bg-body">
+                                    <!-- CAMBIO: object-fit-cover y style de height añadidos -->
+                                    <img src="../img/destinos/grecia.jpg" class="card-img-top object-fit-cover" style="height: 200px;" alt="Grecia">
                                     <div class="card-body">
                                         <span class="badge bg-info mb-2">Cultura</span>
                                         <h5 class="card-title fw-bold">Atenas en 3 días</h5>
-                                        <p class="card-text text-muted">Recorrido histórico por la cuna de la
-                                            civilización moderna.</p>
+                                        <!-- CAMBIO: text-muted por text-body-secondary -->
+                                        <p class="card-text text-body-secondary">Recorrido histórico por la cuna de la civilización moderna.</p>
                                     </div>
                                 </div>
                             </article>
                             <article class="col-12 col-md-6 animacion-scroll">
-                                <div class="card h-100 article-card shadow-sm border-0">
-                                    <img src="../img/destinos/argentina.jpg" class="card-img-top" alt="Montaña">
+                                <div class="card h-100 article-card shadow-sm border-0 bg-body">
+                                    <img src="../img/destinos/argentina.jpg" class="card-img-top object-fit-cover" style="height: 200px;" alt="Montaña">
                                     <div class="card-body">
                                         <span class="badge bg-warning text-dark mb-2">Aventura</span>
                                         <h5 class="card-title fw-bold">Trekking en la Patagonia</h5>
-                                        <p class="card-text text-muted">Guía definitiva para sobrevivir al Glaciar
-                                            Perito Moreno.</p>
+                                        <p class="card-text text-body-secondary">Guía definitiva para sobrevivir al Glaciar Perito Moreno.</p>
                                     </div>
                                 </div>
                             </article>
                             <article class="col-12 col-md-6 animacion-scroll">
-                                <div class="card h-100 article-card shadow-sm border-0">
-                                    <img src="../img/destinos/brazil.jpg" class="card-img-top" alt="Playa">
+                                <div class="card h-100 article-card shadow-sm border-0 bg-body">
+                                    <img src="../img/destinos/brazil.jpg" class="card-img-top object-fit-cover" style="height: 200px;" alt="Playa">
                                     <div class="card-body">
                                         <span class="badge bg-success mb-2">Relax</span>
                                         <h5 class="card-title fw-bold">Playas secretas de Brasil</h5>
-                                        <p class="card-text text-muted">Escapate del ruido en estas playas vírgenes del
-                                            norte.</p>
+                                        <p class="card-text text-body-secondary">Escapate del ruido en estas playas vírgenes del norte.</p>
                                     </div>
                                 </div>
                             </article>
                             <article class="col-12 col-md-6 animacion-scroll">
-                                <div class="card h-100 article-card shadow-sm border-0">
-                                    <img src="../img/destinos/japon.jpg" class="card-img-top" alt="Japón">
+                                <div class="card h-100 article-card shadow-sm border-0 bg-body">
+                                    <img src="../img/destinos/japon.jpg" class="card-img-top object-fit-cover" style="height: 200px;" alt="Japón">
                                     <div class="card-body">
                                         <span class="badge bg-info mb-2">Cultura</span>
                                         <h5 class="card-title fw-bold">Costumbres en Kioto</h5>
-                                        <p class="card-text text-muted">Lo que no debes hacer en un templo japonés.</p>
+                                        <p class="card-text text-body-secondary">Lo que no debes hacer en un templo japonés.</p>
                                     </div>
                                 </div>
                             </article>
@@ -123,13 +125,12 @@
                     <div class="tab-pane fade" id="aventura" tabindex="0">
                         <div class="row g-4">
                             <article class="col-12 col-md-6">
-                                <div class="card h-100 article-card shadow-sm border-0">
-                                    <img src="../img/destinos/argentina.jpg" class="card-img-top" alt="Montaña">
+                                <div class="card h-100 article-card shadow-sm border-0 bg-body">
+                                    <img src="../img/destinos/argentina.jpg" class="card-img-top object-fit-cover" style="height: 200px;" alt="Montaña">
                                     <div class="card-body">
                                         <span class="badge bg-warning text-dark mb-2">Aventura</span>
                                         <h5 class="card-title fw-bold">Trekking en la Patagonia</h5>
-                                        <p class="card-text text-muted">Guía definitiva para sobrevivir al Glaciar
-                                            Perito Moreno.</p>
+                                        <p class="card-text text-body-secondary">Guía definitiva para sobrevivir al Glaciar Perito Moreno.</p>
                                     </div>
                                 </div>
                             </article>
@@ -139,23 +140,22 @@
                     <div class="tab-pane fade" id="cultura" tabindex="0">
                         <div class="row g-4">
                             <article class="col-12 col-md-6">
-                                <div class="card h-100 article-card shadow-sm border-0">
-                                    <img src="../img/destinos/grecia.jpg" class="card-img-top" alt="Grecia">
+                                <div class="card h-100 article-card shadow-sm border-0 bg-body">
+                                    <img src="../img/destinos/grecia.jpg" class="card-img-top object-fit-cover" style="height: 200px;" alt="Grecia">
                                     <div class="card-body">
                                         <span class="badge bg-info mb-2">Cultura</span>
                                         <h5 class="card-title fw-bold">Atenas en 3 días</h5>
-                                        <p class="card-text text-muted">Recorrido histórico por la cuna de la
-                                            civilización moderna.</p>
+                                        <p class="card-text text-body-secondary">Recorrido histórico por la cuna de la civilización moderna.</p>
                                     </div>
                                 </div>
                             </article>
                             <article class="col-12 col-md-6">
-                                <div class="card h-100 article-card shadow-sm border-0">
-                                    <img src="../img/destinos/japon.jpg" class="card-img-top" alt="Japón">
+                                <div class="card h-100 article-card shadow-sm border-0 bg-body">
+                                    <img src="../img/destinos/japon.jpg" class="card-img-top object-fit-cover" style="height: 200px;" alt="Japón">
                                     <div class="card-body">
                                         <span class="badge bg-info mb-2">Cultura</span>
                                         <h5 class="card-title fw-bold">Costumbres en Kioto</h5>
-                                        <p class="card-text text-muted">Lo que no debes hacer en un templo japonés.</p>
+                                        <p class="card-text text-body-secondary">Lo que no debes hacer en un templo japonés.</p>
                                     </div>
                                 </div>
                             </article>
@@ -165,13 +165,12 @@
                     <div class="tab-pane fade" id="relax" tabindex="0">
                         <div class="row g-4">
                             <article class="col-12 col-md-6">
-                                <div class="card h-100 article-card shadow-sm border-0">
-                                    <img src="../img/destinos/brazil.jpg" class="card-img-top" alt="Playa">
+                                <div class="card h-100 article-card shadow-sm border-0 bg-body">
+                                    <img src="../img/destinos/brazil.jpg" class="card-img-top object-fit-cover" style="height: 200px;" alt="Playa">
                                     <div class="card-body">
                                         <span class="badge bg-success mb-2">Relax</span>
                                         <h5 class="card-title fw-bold">Playas secretas de Brasil</h5>
-                                        <p class="card-text text-muted">Escapate del ruido en estas playas vírgenes del
-                                            norte.</p>
+                                        <p class="card-text text-body-secondary">Escapate del ruido en estas playas vírgenes del norte.</p>
                                     </div>
                                 </div>
                             </article>
@@ -180,19 +179,17 @@
 
                 </div>
 
-                <div class="comentarios-section bg-white p-4 rounded-4 shadow-sm border">
-                    <h4 class="fw-bold mb-4 border-bottom pb-2"><i
-                            class="bi bi-chat-left-text me-2 text-primary"></i>Comentarios</h4>
+                <!-- CAMBIO: bg-white por bg-body -->
+                <div class="comentarios-section bg-body p-4 rounded-4 shadow-sm border">
+                    <h4 class="fw-bold mb-4 border-bottom pb-2"><i class="bi bi-chat-left-text me-2 text-primary"></i>Comentarios</h4>
 
                     <div id="lista-comentarios" class="mb-4">
-                        <div class="d-flex mb-3 comentario-burbuja p-3 rounded-3 shadow-sm bg-light">
-                            <img src="https://ui-avatars.com/api/?name=Ana+Gomez&background=random"
-                                class="rounded-circle me-3" width="50" height="50" alt="Avatar">
+                        <!-- CAMBIO: bg-light por bg-body-secondary -->
+                        <div class="d-flex mb-3 comentario-burbuja p-3 rounded-3 shadow-sm bg-body-secondary">
+                            <img src="https://ui-avatars.com/api/?name=Ana+Gomez&background=random" class="rounded-circle me-3" width="50" height="50" alt="Avatar">
                             <div>
-                                <h6 class="fw-bold mb-1">Ana Gómez <span class="text-muted small fw-normal ms-2">Hace 2
-                                        días</span></h6>
-                                <p class="mb-0 text-secondary small">¡Me encantó la guía de Atenas! Ojalá pueda ir el
-                                    año que viene, guardé todos los tips.</p>
+                                <h6 class="fw-bold mb-1">Ana Gómez <span class="text-body-secondary small fw-normal ms-2">Hace 2 días</span></h6>
+                                <p class="mb-0 text-body-secondary small">¡Me encantó la guía de Atenas! Ojalá pueda ir el año que viene, guardé todos los tips.</p>
                             </div>
                         </div>
                     </div>
@@ -200,16 +197,13 @@
                     <form id="form-comentario">
                         <div class="row g-2 mb-3">
                             <div class="col-md-6">
-                                <input type="text" class="form-control" id="nombreUsuario" placeholder="Tu Nombre"
-                                    required>
+                                <input type="text" class="form-control" id="nombreUsuario" placeholder="Tu Nombre" required>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <textarea class="form-control" id="textoComentario" rows="3"
-                                placeholder="Escribe tu comentario aquí..." required></textarea>
+                            <textarea class="form-control" id="textoComentario" rows="3" placeholder="Escribe tu comentario aquí..." required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary fw-bold rounded-pill px-4">Publicar
-                            Comentario</button>
+                        <button type="submit" class="btn btn-primary fw-bold rounded-pill px-4">Publicar Comentario</button>
                     </form>
                 </div>
 
@@ -217,19 +211,16 @@
 
             <aside class="col-12 col-lg-4">
                 <div class="sticky-top" style="top: 100px;">
-
-                    <div class="card border-0 shadow-sm rounded-4 text-center autor-card">
+                    <!-- LA AUTOR CARD MANTIENE SU CLASE PORQUE EL GRADIENTE ES CUSTOM -->
+                    <div class="card border-0 shadow-sm rounded-4 text-center autor-card bg-body">
                         <div class="card-body p-4">
                             <img src="../img/blog/john.png" class="rounded-circle mb-3 shadow" width="100" height="100"
                                 style="object-fit: cover;" alt="John Doe">
                             <h5 class="fw-bold">John Doe</h5>
-                            <p class="text-muted small mb-3">Fotógrafo de viajes y mochilero empedernido. Escribo para
-                                inspirarte a empacar y salir.</p>
+                            <p class="text-body-secondary small mb-3">Fotógrafo de viajes y mochilero empedernido. Escribo para inspirarte a empacar y salir.</p>
                             <div class="d-flex justify-content-center gap-2">
-                                <a href="#" class="btn btn-sm btn-outline-dark rounded-circle"><i
-                                        class="bi bi-instagram"></i></a>
-                                <a href="#" class="btn btn-sm btn-outline-dark rounded-circle"><i
-                                        class="bi bi-twitter-x"></i></a>
+                                <a href="#" class="btn btn-sm btn-outline-dark rounded-circle"><i class="bi bi-instagram"></i></a>
+                                <a href="#" class="btn btn-sm btn-outline-dark rounded-circle"><i class="bi bi-twitter-x"></i></a>
                             </div>
                         </div>
                     </div>

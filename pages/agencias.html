@@ -46,10 +46,11 @@
         </nav>
     </header>
 
-    <main class="py-5" style="background-color: #f4f6f8;">
-        <div class="container text-center mb-5 banner-titulo shadow-sm">
-            <h1 class="display-5 fw-bold text-white mb-3">Nuestras Agencias Asociadas</h1>
-            <p class="mx-auto" style="max-width: 700px; color: #e9ecef; font-size: 1.1rem;">
+    <main class="py-5 bg-body-secondary">
+        <!-- AGREGADO: text-bg-dark y rounded-4 para reemplazar el CSS del banner -->
+        <div class="container text-center mb-5 banner-titulo shadow-sm py-5 px-4 mt-4 rounded-4 text-bg-dark">
+            <h1 class="display-5 fw-bold mb-3">Nuestras Agencias Asociadas</h1>
+            <p class="mx-auto" style="max-width: 700px; font-size: 1.1rem;">
                 Trabajamos con agencias de turismo reconocidas que ofrecen experiencias únicas en distintos destinos del mundo.
             </p>
         </div>
@@ -57,16 +58,20 @@
         <div class="container">
             <section class="row g-5 justify-content-center">
 
+                <!-- TARJETA 1 -->
                 <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center">
                     <div class="card-custom">
-                        <div class="card-inner">
-                            <div class="card-front bg-white border rounded-3 shadow-sm">
+                        <!-- AGREGADO: position-relative w-100 h-100 d-flex -->
+                        <div class="card-inner position-relative w-100 h-100 d-flex">
+                            <!-- AGREGADO: position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center. Cambiado bg-white por bg-body -->
+                            <div class="card-front bg-body border rounded-3 shadow-sm position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center">
                                 <h3 class="h4 fw-bold mt-3">Global Travel</h3>
                                 <p class="text-muted">Viajes internacionales</p>
-                                <i class="sprite logo-1 mt-2"></i>
+                                <!-- AGREGADO: d-inline-block -->
+                                <i class="sprite logo-1 mt-2 d-inline-block"></i>
                             </div>
-                            <div class="card-back rounded-3 p-3 shadow text-center"
-                                style="background: #2c3e50; color: white;">
+                            <!-- AGREGADO: text-bg-dark position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center. Eliminado el style fijo -->
+                            <div class="card-back rounded-3 p-3 shadow text-center position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center text-bg-dark">
                                 <p>Especialistas en paquetes completos por Europa y América.</p>
                                 <div class="rating-box" data-rating="5"></div>
                                 <button class="btn btn-light btn-sm mt-3 fw-bold">
@@ -77,16 +82,16 @@
                     </div>
                 </div>
 
+                <!-- TARJETA 2 -->
                 <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center">
                     <div class="card-custom">
-                        <div class="card-inner">
-                            <div class="card-front bg-white border rounded-3 shadow-sm">
+                        <div class="card-inner position-relative w-100 h-100 d-flex">
+                            <div class="card-front bg-body border rounded-3 shadow-sm position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center">
                                 <h3 class="h4 fw-bold mt-3">Andes Tours</h3>
                                 <p class="text-muted">Turismo nacional</p>
-                                <i class="sprite logo-2 mt-2"></i>
+                                <i class="sprite logo-2 mt-2 d-inline-block"></i>
                             </div>
-                            <div class="card-back rounded-3 p-3 shadow text-center"
-                                style="background: #2c3e50; color: white;">
+                            <div class="card-back rounded-3 p-3 shadow text-center position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center text-bg-dark">
                                 <p>Recorridos por Argentina, con enfoque en naturaleza.</p>
                                 <div class="rating-box" data-rating="5"></div>
                                 <button class="btn btn-light btn-sm mt-3 fw-bold">
@@ -97,18 +102,17 @@
                     </div>
                 </div>
 
+                <!-- TARJETA 3 -->
                 <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center">
                     <div class="card-custom">
-                        <div class="card-inner">
-                            <div class="card-front bg-white border rounded-3 shadow-sm">
+                        <div class="card-inner position-relative w-100 h-100 d-flex">
+                            <div class="card-front bg-body border rounded-3 shadow-sm position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center">
                                 <h3 class="h4 fw-bold mt-3">Skyline Travel</h3>
                                 <p class="text-muted">Aventuras por el mundo</p>
-                                <i class="sprite logo-3 mt-2"></i>
+                                <i class="sprite logo-3 mt-2 d-inline-block"></i>
                             </div>
-                            <div class="card-back rounded-3 p-3 shadow text-center"
-                                style="background: #2c3e50; color: white;">
-                                <p>Especialistas en viajes de aventura y experiencias únicas en distintos continentes.
-                                </p>
+                            <div class="card-back rounded-3 p-3 shadow text-center position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center text-bg-dark">
+                                <p>Especialistas en viajes de aventura y experiencias únicas en distintos continentes.</p>
                                 <div class="rating-box" data-rating="5"></div>
                                 <button class="btn btn-light btn-sm mt-3 fw-bold">
                                     <i class="bi bi-check2-circle text-success"></i> Reservar
@@ -118,16 +122,16 @@
                     </div>
                 </div>
 
+                <!-- TARJETA 4 -->
                 <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center">
                     <div class="card-custom">
-                        <div class="card-inner">
-                            <div class="card-front bg-white border rounded-3 shadow-sm">
+                        <div class="card-inner position-relative w-100 h-100 d-flex">
+                            <div class="card-front bg-body border rounded-3 shadow-sm position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center">
                                 <h3 class="h4 fw-bold mt-3">Oceanic Tours</h3>
                                 <p class="text-muted">Cruceros y playas</p>
-                                <i class="sprite logo-4 mt-2"></i>
+                                <i class="sprite logo-4 mt-2 d-inline-block"></i>
                             </div>
-                            <div class="card-back rounded-3 p-3 shadow text-center"
-                                style="background: #2c3e50; color: white;">
+                            <div class="card-back rounded-3 p-3 shadow text-center position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center text-bg-dark">
                                 <p>Viajes en crucero y destinos de playa con servicios todo incluido.</p>
                                 <div class="rating-box" data-rating="5"></div>
                                 <button class="btn btn-light btn-sm mt-3 fw-bold">
@@ -138,16 +142,16 @@
                     </div>
                 </div>
 
+                <!-- TARJETA 5 -->
                 <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center">
                     <div class="card-custom">
-                        <div class="card-inner">
-                            <div class="card-front bg-white border rounded-3 shadow-sm">
+                        <div class="card-inner position-relative w-100 h-100 d-flex">
+                            <div class="card-front bg-body border rounded-3 shadow-sm position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center">
                                 <h3 class="h4 fw-bold mt-3">Eco Explorer</h3>
                                 <p class="text-muted">Turismo sustentable</p>
-                                <i class="sprite logo-5 mt-2"></i>
+                                <i class="sprite logo-5 mt-2 d-inline-block"></i>
                             </div>
-                            <div class="card-back rounded-3 p-3 shadow text-center"
-                                style="background: #2c3e50; color: white;">
+                            <div class="card-back rounded-3 p-3 shadow text-center position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center text-bg-dark">
                                 <p>Conecta con la naturaleza de forma responsable y ecológica.</p>
                                 <div class="rating-box" data-rating="4"></div>
                                 <button class="btn btn-light btn-sm mt-3 fw-bold">
@@ -158,16 +162,16 @@
                     </div>
                 </div>
 
+                <!-- TARJETA 6 -->
                 <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center">
                     <div class="card-custom">
-                        <div class="card-inner">
-                            <div class="card-front bg-white border rounded-3 shadow-sm">
+                        <div class="card-inner position-relative w-100 h-100 d-flex">
+                            <div class="card-front bg-body border rounded-3 shadow-sm position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center">
                                 <h3 class="h4 fw-bold mt-3">City Breaks</h3>
                                 <p class="text-muted">Escapadas urbanas</p>
-                                <i class="sprite logo-6 mt-2"></i>
+                                <i class="sprite logo-6 mt-2 d-inline-block"></i>
                             </div>
-                            <div class="card-back rounded-3 p-3 shadow text-center"
-                                style="background: #2c3e50; color: white;">
+                            <div class="card-back rounded-3 p-3 shadow text-center position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center text-bg-dark">
                                 <p>Descubrí la cultura, historia y gastronomía de las grandes metrópolis.</p>
                                 <div class="rating-box" data-rating="5"></div>
                                 <button class="btn btn-light btn-sm mt-3 fw-bold">
@@ -193,5 +197,4 @@
     <script src="../js/global.js"></script>
     <script src="../js/agencias.js"></script>
 </body>
-
 </html>
