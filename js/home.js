@@ -2,24 +2,23 @@ $(document).ready(function () {
     $("#titulo").fadeIn(1000);
     $("#texto").fadeIn(2000);
 
-    $('.contador').each(function () {
-        let $this = $(this);
-        let target = +$this.attr('data-target');
 
-        $({ countNum: 0 }).animate(
-            { countNum: target },
-            {
-                duration: 5000,
-                easing: 'swing',
-                step: function () {
-                    $this.text("+ " + Math.floor(this.countNum));
-                },
-                complete: function () {
-                    $this.text("+ " + this.countNum);
-                }
+    let $this = $('.contador');
+    let target = +$this.attr('data-target');
+
+    $({ countNum: 0 }).animate(
+        { countNum: target },
+        {
+            duration: 5000,
+            easing: 'swing',
+            step: function () {
+                $this.text("+ " + Math.floor(this.countNum));
+            },
+            complete: function () {
+                $this.text("+ " + this.countNum);
             }
-        );
-    });
+        }
+    );
 
 
     function sanitizar(texto) {
@@ -45,9 +44,7 @@ $(document).ready(function () {
             .css("color", "green")
             .hide()
             .fadeIn(800);
-        setTimeout(function () {
-            $("#mensaje").fadeOut(800);
-        }, 3000); // espera 3 segundos
+            setTimeout(function () { $("#mensaje").fadeOut(800); }, 3000); // espera 3 segundos
 
 
         // Limpiar formulario
