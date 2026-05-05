@@ -9,22 +9,20 @@
     transition: all 0.3s ease;
 }
 
-/* --- BANNER DEL TÍTULO --- */
-.banner-salmon {
-    background-color: rgb(221, 97, 48); 
-    padding: 3rem 1.5rem; /* Le da un buen espacio arriba y abajo */
-    border-radius: 20px; 
-}
-
-/* Ajuste del banner para el Modo Oscuro */
-[data-bs-theme="dark"] .banner-salmon {
-    background-color: #b54c23 !important; /* Un salmón un poco más oscuro para que no encandile */
-}
-
 .nav-pills .nav-link.active.pill-salmon,
 .pill-salmon:hover {
     background-color: rgb(221, 97, 48) !important;
     color: white !important;
+}
+
+/* --- BANNER DEL TÍTULO --- */
+.banner-salmon {
+    background-color: rgb(221, 97, 48); 
+}
+
+/* Ajuste del banner para el Modo Oscuro */
+[data-bs-theme="dark"] .banner-salmon {
+    background-color: #b54c23 !important; 
 }
 
 /* --- TARJETAS DE ARTÍCULOS --- */
@@ -34,8 +32,8 @@
     overflow: hidden;
 }
 
+/* Dejamos el alto fijo acá para no ensuciar el HTML */
 .article-card img {
-    object-fit: cover;
     height: 200px;
 }
 
@@ -47,6 +45,12 @@
 /* --- BARRA LATERAL (ASIDE) --- */
 .autor-card {
     background: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
+}
+
+/* Ajuste de la tarjeta del autor para Modo Oscuro (Apaga el degradado claro) */
+[data-bs-theme="dark"] .autor-card {
+    background: #253345 !important;
+    border: 1px solid #334155 !important;
 }
 
 /* --- ANIMACIÓN DE SCROLL ORIGINAL --- */
@@ -61,54 +65,4 @@
     animation-timeline: --img;
     animation-name: show;
     animation-fill-mode: both;
-}
-
-/* MODO OSCURO */
-
-[data-bs-theme="dark"] body {
-    background-color: #121212 !important; 
-}
-
-[data-bs-theme="dark"] header {
-    background-color: #1a1a1a !important;
-    border-bottom: 1px solid #333;
-}
-
-[data-bs-theme="dark"] h1, 
-[data-bs-theme="dark"] h4,
-[data-bs-theme="dark"] h5,
-[data-bs-theme="dark"] h6 {
-    color: #f8f9fa !important;
-}
-
-/* Oscurecer los paneles blancos */
-[data-bs-theme="dark"] .bg-white {
-    background-color: #1e293b !important;
-    border-color: #334155 !important;
-}
-
-/* Tarjetas y Autor en oscuro */
-[data-bs-theme="dark"] .article-card,
-[data-bs-theme="dark"] .autor-card {
-    background: #253345 !important;
-    border: 1px solid #334155 !important;
-}
-
-[data-bs-theme="dark"] .card-text {
-    color: #adb5bd !important;
-}
-
-/* Comentarios en oscuro */
-[data-bs-theme="dark"] .comentario-burbuja {
-    background-color: #334155 !important;
-}
-
-[data-bs-theme="dark"] .form-control {
-    background-color: #1e293b;
-    border-color: #475569;
-    color: white;
-}
-
-[data-bs-theme="dark"] .form-control::placeholder {
-    color: #94a3b8;
 }

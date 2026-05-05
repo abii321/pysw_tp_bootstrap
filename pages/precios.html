@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="../css/precios.css">
 </head>
 
-<body class="bg-light">
+<body class="bg-body-tertiary" data-bs-theme="light">
 
-    <header class="bg-white shadow-sm sticky-top">
+    <!-- CAMBIO: bg-white por bg-body -->
+    <header class="bg-body shadow-sm sticky-top">
         <nav class="navbar navbar-expand-sm">
             <div class="container-fluid">
                 <a class="navbar-brand"><i class="bi bi-globe-americas"></i></a>
@@ -45,19 +46,24 @@
         </nav>
     </header>
 
-    <main class="py-5" style="background-color: #f4f6f8;">
-        <div class="container text-center mb-5 banner-titulo shadow-sm">
-            <h1 class="display-5 fw-bold text-white mb-3">Comparador de Precios por Destino</h1>
-            <p class="mx-auto" style="max-width: 800px; color: #e9ecef; font-size: 1.1rem;">
+    <!-- CAMBIO: bg-body-tertiary reemplaza el style de color fijo -->
+    <main class="py-5 bg-body-tertiary">
+        
+        <!-- CAMBIO: Agregado py-5 px-4 mt-4 rounded-4 text-white al banner -->
+        <div class="container text-center mb-5 banner-titulo shadow-sm py-5 px-4 mt-4 rounded-4 text-white">
+            <h1 class="display-5 fw-bold mb-3">Comparador de Precios por Destino</h1>
+            <p class="mx-auto text-light" style="max-width: 800px; font-size: 1.1rem;">
                 A continuación se presenta una comparación de precios de distintos destinos turísticos, incluyendo los
                 servicios principales de cada paquete.
             </p>
         </div>
 
         <div class="container">
+            <!-- CAMBIO: Eliminado el bg-white de la tabla para que sea compatible con Modo Oscuro -->
             <div class="table-responsive shadow-sm rounded-3">
-                <table class="table table-hover table-bordered align-middle text-center mb-0 bg-white">
-                    <thead class="tabla-header">
+                <table class="table table-hover table-bordered align-middle text-center mb-0">
+                    <!-- CAMBIO: Thead nativo de Bootstrap table-dark -->
+                    <thead class="table-dark">
                         <tr>
                             <th class="py-3">Destino</th>
                             <th class="py-3">Precio</th>
